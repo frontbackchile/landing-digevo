@@ -1,0 +1,172 @@
+extends ../templates/default.jade
+block page
+
+
+	section.section--main
+		.section__video
+			video#myvideo(playsinline autoplay muted loop)
+				source(src="videos/video_1.mp4" type="video/mp4")
+		
+		.section__wrap.section__wrap--main
+			.section__body
+				.section__content
+					h1.section__title Bienvenidos a The Startup Journey
+					p.section__description: +lorem(35)
+	
+
+	section.section--ventures.section--light
+		.section__wrap
+			.section__body
+				.cols
+					.section__flex
+						.col-md-6.dscroll
+							.section__content
+								h2.section__title Una idea de DIGEVO VENTURES.
+								p.section__description: +lorem(45)
+								p.section__description: +lorem(25)
+								.section__icons
+									.section__img
+										a(href="#")
+											img(src="img/icons/ventures-color.png")
+									.section__img
+										a(href="#")
+											img(src="img/icons/logo-corfo.png")
+						
+						.col-md-6.dscroll
+							.section__bg.yt-video(data-id="yuxhGSdLK8Q")
+								.bg
+									img(src="img/uploads/1.jpg")
+								.section__play.play
+									.section__text Ver video
+									span.fa.fa-play
+	section.section--nav
+		.section__nav(sticky)
+			.section__nav__sticky
+				ul
+					li: a(href="#" data-goto=".section--content") ¿Que es?
+					li: a(href="#" data-goto=".section--features") Caracteristicas
+					li: a(href="#" data-goto=".section--course-1") El Viaje del Emprendedor
+					li: a(href="#" data-goto=".section--course-2") Curso Pitch Sólido
+					li: a(href="#" data-goto=".section--banner") Libro de Startup Journey
+					li: a(href="#" data-goto=".section--evolution") Acerca de evolution
+
+	section.section--content
+		.section__bg
+			.bg
+				img(src="img/uploads/geometric.png")
+		.section__wrap.section--sm
+			.section__body
+				.section__content.section--center.dscroll
+					h3.section__title ¿Que es The Startup Journey?
+					.section__img
+						img(src="img/icons/logo-main.png")
+					p.section__description: +lorem(55)
+					p.section__description: +lorem(45)
+	
+
+	section.section--features.section--light
+		.section__wrap
+			.section__body
+				.cols
+					.section__flex
+						.col-md-6
+							.section__content
+								h3.section__title Caracteristicas
+								p.section__description: +lorem(55)
+								p.section__description: +lorem(35)
+						
+						.col-md-6
+							.section__features
+								article.article--feature.dscroll
+									.article__icon
+										img(src="img/icons/1.svg")
+									.article__body
+										h4.article__title Gratuito
+										p.article__description: +lorem(25)
+
+								article.article--feature.dscroll
+									.article__icon
+										img(src="img/icons/2.svg")
+									.article__body
+										h4.article__title Responsive
+										p.article__description: +lorem(25)
+
+								article.article--feature.dscroll
+									.article__icon
+										img(src="img/icons/3.svg")
+									.article__body
+										h4.article__title Evaluaciones
+										p.article__description: +lorem(25)
+
+
+	section.section--media.section--media--invert.section--course-1
+		.section__wrap
+			.section__body
+				.cols
+					.section__flex
+						.col-md-6.dscroll
+							.section__svg
+								img(src="img/uploads/7.svg")
+
+						.col-md-6.dscroll
+							.section__content
+								span.section__subtitle Curso 1
+								h2.section__title El Viaje del Emprendedor
+								p.section__description: +lorem(45)
+								a.btn.btn--white(href="the-startup-journey.html") Ver curso
+									span.fa.fa-long-arrow-right
+
+
+	section.section--media.section--course-2.section--light
+		.section__wrap
+			.section__body
+				.cols
+					.section__flex
+						.col-md-6.col-md-push-6.dscroll
+							.section__svg
+								img(src="img/uploads/8.svg")
+
+						.col-md-6.col-md-pull-6.dscroll
+							.section__content
+								span.section__subtitle Curso 2
+								h2.section__title Pitch Sólido
+								p.section__description: +lorem(45)
+								a.btn.btn--white(href="pitch-solido.html") Ver curso
+									span.fa.fa-long-arrow-right
+	
+
+	section.section--banner
+		.section__bg
+			.bg
+				img(src="img/uploads/libro.jpg")
+		.section__body
+			.section__content.section--center.dscroll
+				h2.section__title Libro de Startup Journey
+				p.section__description: +lorem(55)
+				.section__buttons
+					a.btn(href="#") Comprar Impreso
+						span.fa.fa-long-arrow-right
+					a.btn(href="#") Comprar Digital
+						span.fa.fa-long-arrow-right
+
+
+	section.section--evolution
+		.section__wrap
+			.section__body
+				.cols
+					.section__flex
+						.col-md-6.col-md-push-6.dscroll
+							.section__bg.yt-video(data-id="Xz5Fpm_lG14")
+								.bg
+									img(src="img/uploads/4.jpg")
+								.section__play.play
+									.section__text Ver video
+									span.fa.fa-play
+
+						.col-md-6.col-md-pull-6.dscroll
+							.section__content
+								h2.section__title Evolution
+								p.section__subtitle Si tienes el sueño de emprender ¡Ven y conócenos!
+								p.section__description: +lorem(35)
+								a.btn(href="#") Quiero saber más
+									span.fa.fa-long-arrow-right

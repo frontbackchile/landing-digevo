@@ -1,0 +1,560 @@
+
+#sections
+	&.section--dark
+		section
+			background-color $dark
+			color white
+			.wp
+				color white
+		
+section
+	position relative
+	background-color transparent
+	color $dark
+	overflow hidden
+
+	// Elementos
+		
+	.section__bg
+		cover(absolute)
+		&:after
+			content ''
+			position absolute
+			top -10px
+			right -10px
+			background-color transparent
+			border 1px solid $color_secondary
+			width 100%
+			height 100%
+			z-index -10
+			@media $break-md
+				top -20px
+				right -20px
+		
+		
+
+	.section__title
+		font-weight bold
+
+	.section__description
+		font-weight 300
+		margin-bottom $global-sep + 5
+		@media $break-md
+			line-height $global-lh-md 
+			font-size $global-size-md 
+
+
+	
+
+	.section__video
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		pointer-events none
+		overflow hidden
+		opacity .2
+		video
+			width 100vw
+			height 56.25vw
+			min-height 100vh
+			min-width 177.77vh
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+
+
+			
+	.section__content
+		position relative
+		color $dark
+		line-height $global-lh-md
+		font-size $global-size-xmd
+		&>*
+			animation slideFadeUp .5s ease backwards
+			animation-stagger(5,.2s)
+		&.section--left
+			text-align left
+
+		&.section--right
+			text-align right
+
+		&.section--center
+			text-align center
+
+		&.section--justify
+			text-align justify
+		
+		blockquote
+			p
+				line-height $global-lh-md
+				font-size $global-size-md
+				color $dark
+				@media $break-md
+					font-size $global-size-lg		
+
+		ul
+			margin-bottom 20px
+			li
+				padding 5px 0px
+				&:before
+					content ''
+					display inline-block
+					margin-right 10px
+					position relative
+					top -1px
+					width 10px
+					height 10px
+					line-height 21px
+					text-align center
+					border-radius 50%
+					overflow initial
+					background-color $color_primary
+
+		&.section__content--2col
+			@media $break-sm
+				column-count 2
+				column-gap 40px
+
+		&.section__content--3col
+			@media $break-sm
+				column-count 2
+				column-gap 40px
+			@media $break-md
+				column-count 3	
+
+	.section__nav
+		height 50px
+		margin-bottom 30px
+		@media $break-md
+			font-size $global-size-md
+
+		.section__nav__sticky
+			overflow auto
+			white-space nowrap
+			border-top 1px solid rgba(0,0,0,.1)
+			border-bottom 1px solid rgba(0,0,0,.1)
+			position relative
+			z-index 5
+			width 100%
+			background white
+			padding 0 20px
+
+		&.section__nav--alone
+			border-top 0
+			text-align center
+
+		&.sticked
+			
+			.section__nav__sticky
+				position fixed
+				top 60px
+				left 0
+				padding 0 20px
+				text-align center
+				box-shadow $shadow
+				border-top none
+				border-bottom none
+				@media $break-md
+					top 80px
+					padding 0 40px
+
+		ul
+			padding 0 0px
+			text-align center
+			li
+				display inline-block
+				a
+					display inline-block
+					padding 16px 0
+					color $gray
+					position relative
+					opacity .7
+					font-weight 500
+					margin-right 20px
+					@media $break-md
+						margin-right 20px
+					&:after
+						content ""
+						position absolute
+						bottom 0
+						left 0
+						width 0%
+						height 5px
+						background $color_primary
+						opacity .8
+					.fa
+						margin-right 2px
+					&:hover
+						opacity 1
+					&.current
+						opacity 1
+						&:after
+							width 100%
+	
+
+	
+	.section__flex
+		@media $break-md
+			display flex
+			flex-direction row
+			align-items center				
+
+	.section__wrap
+		position relative
+		max-width $limit
+		margin 0 auto
+		padding 30px 20px
+		@media $break-md
+			padding 60px 40px
+
+		&.section__wrap--main
+			padding 100px 20px 50px
+			@media $break-md
+				display flex
+				height 60vh
+				align-items center
+				justify-content flex-start
+		
+		&.section__wrap--header
+			padding 30px 20px
+			@media $break-md
+				padding 100px 40px
+				padding-top 160px
+						
+		&.section__wrap--sm
+			@media $break-md
+				padding 40px
+
+		&.section__wrap--xs
+			@media $break-md
+				padding 20px
+
+		&.section__wrap--lg
+			@media $break-md
+				padding 60px 40px
+			@media $break-lg
+				padding 80px 40px
+
+		&.section--sm
+			max-width ($limit - 500)
+
+		&.section--md
+			max-width ($limit - 340)
+		
+		&.section--lg
+			max-width ($limit - 200)
+
+	// Variantes
+
+
+	&.section--dark
+		background $dark
+		color white
+						
+	&.section--light
+		background-color $light
+		color $dark
+	
+	&.section--white
+		background white
+		color $dark	
+	
+	&.section--lighter
+		background $lighter
+		color $dark	
+
+	&.section--white
+		background white
+		color $dark
+	
+	&.section--color-primary
+		background $color_primary
+		color white
+	
+	&.section--color-secundary
+		background $color_primary
+		color white	
+	
+	&.section--gray
+		background $gray
+		color white	
+	
+	&.section--grayten
+		background grayter
+		color white	
+
+	// Types
+
+	
+
+	&.section--main
+		background: rgb(227,86,36);
+		background: linear-gradient(90deg, rgba(227,86,36,1) 0%, rgba(246,188,49,1) 100%);
+		.section__body
+			.section__content
+				color white
+				border-left 1px solid rgba(255,255,255,.3)
+				padding-left 10px
+				@media $break-md
+					max-width 50%
+		.section__bg
+			opacity .3
+
+	&.section--ventures
+
+		.section__body
+			.section__content
+				padding-left 10px
+				border-left 1px solid $color_secondary
+				margin-bottom 20px
+				@media $break-md
+					margin-bottom 0
+
+			.section__bg
+				position relative
+				proportion 16,9
+				background: rgb(227,86,36);
+				background: linear-gradient(90deg, rgba(227,86,36,1) 0%, rgba(246,188,49,1) 100%);
+				.bg
+					opacity .5
+				.section__play
+					position absolute
+					top 80%
+					left 75%
+					transform translate(-50%,-50%)
+					background-color rgba(0,0,0,.2)
+					border 1px solid rgba(255,255,255,.3)
+					color white
+					padding 5px 20px
+					display flex
+					justify-content center
+					align-items center
+					cursor pointer
+					transition .2s
+					min-width 140px
+					@media $break-md
+						top 90%
+						left 85%
+					&:hover
+						background-color $color_primary
+						color white
+					.section__text
+						margin-right 10px
+			
+			.section__icons
+				display flex
+				padding 20px
+				justify-content space-around
+				align-items center
+				@media $break-md
+					max-width 60%
+				.section__img
+					img
+						height 30px
+						@media $break-md
+							height 50px
+
+	&.section--content
+		.section__bg
+			height 110%
+			animation translateBg 15s ease-out
+		.section__content
+			color white
+			padding 10px
+			background-color rgba(0,0,0,.2)
+			border 1px solid rgba(255,255,255,.3)
+			@media $break-md
+				padding 20px
+			.section__description
+				font-weight 500
+
+		.section__img
+			padding 20px 0px
+			@media $break-md
+				padding 40px 0px
+			img
+				width 100%
+				max-width 300px
+
+	
+	&.section--features
+		.section__content
+			padding-left 10px
+			border-left 1px solid $color_secondary
+	
+	&.section--media
+		.section__bg
+			position relative
+			proportion 16,9
+			background: rgb(227,86,36);
+			background: linear-gradient(90deg, rgba(227,86,36,1) 0%, rgba(246,188,49,1) 100%);
+			margin-bottom 20px
+			@media $break-md
+				margin-bottom 0
+			.bg
+				opacity .5
+		
+		.section__flex
+			&>*
+				z-index 1
+
+		.section__content
+			padding-left 10px
+			border-left 1px solid $color_secondary
+			@media $break-md
+				max-width 80%
+			.section__subtitle
+				position relative
+				display inline-block
+				background-color $color_primary
+				padding 5px 20px
+				color white
+				font-weight 12px
+				line-height 14px
+				margin-bottom 20px
+				font-weight bold
+				z-index 1
+				text-align left
+				border-radius 15px
+
+		
+		&.section--media--invert
+			.section__bg
+				&:after
+					content ''
+					right initial 
+					left -10px
+					@media $break-md
+						left -20px
+
+
+	&.section--banner
+		.section__bg
+			background: rgb(227,86,36);
+			background: linear-gradient(90deg, rgba(227,86,36,1) 0%, rgba(246,188,49,1) 100%);
+			&:after
+				content ''
+				display none
+			.bg
+				opacity .3
+
+		.section__body
+			padding 80px 20px
+			.section__content
+				color white
+				max-width 800px
+				margin 0 auto
+				padding 10px
+				background-color rgba(0,0,0,.2)
+				border 1px solid rgba(255,255,255,.3)
+				.section__description
+					opacity 1
+					font-weight 500
+			.section__buttons
+				.btn
+					margin 5px
+					&:hover
+						background-color white
+	
+	&.section--evolution
+		.section__content
+			padding-left 10px
+			border-left 1px solid $color_secondary
+
+		.section__bg
+			position relative
+			proportion 16,9
+			background: rgb(227,86,36);
+			background: linear-gradient(90deg, rgba(227,86,36,1) 0%, rgba(246,188,49,1) 100%);
+			.bg
+				opacity .5
+			.section__play
+				position absolute
+				top 80%
+				left 75%
+				transform translate(-50%,-50%)
+				background-color rgba(0,0,0,.2)
+				border 1px solid rgba(255,255,255,.3)
+				color white
+				padding 5px 20px
+				display flex
+				justify-content center
+				align-items center
+				cursor pointer
+				transition .2s
+				min-width 140px
+				@media $break-md
+					top 90%
+					left 85%
+				&:hover
+					background-color $color_primary
+					color white
+				.section__text
+					margin-right 10px
+			
+			.section__icons
+				display flex
+				padding 20px
+				justify-content space-around
+				align-items center
+				@media $break-md
+					max-width 60%
+				.section__img
+					img
+						height 30px
+						@media $break-md
+							height 50px
+
+
+	&.section--avatar
+		.section__avatar
+			circle(300px)
+			margin 0 auto
+			border 5px solid $color_secondary
+			margin-bottom 20px
+			@media $break-md
+				circle(400px)
+				margin-bottom 0
+		.section__content
+			padding-left 10px
+			border-left 1px solid $color_secondary
+			.section__name
+				font-weight bold
+				margin-bottom 5px
+			.section__position
+				margin-bottom 5px
+				font-style italic
+			
+			.section__socials
+				display flex
+				.section__social
+					circle(40px)
+					background-color $color_primary
+					color white
+					margin 5px
+					a
+						color white
+
+	&.section--form
+		background-color $light
+		.section__body
+			max-width 600px
+			margin 0 auto
+			.section__form
+				padding 20px
+				box-shadow $shadow
+				background-color white
+				.form__element
+					margin-bottom 20px
+	
+	&.section--button
+		.section__button
+			text-align center
+			.btn
+				margin 0 auto
+
+	&.section--header
+		margin-top 80px

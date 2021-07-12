@@ -1,0 +1,80 @@
+article
+	position relative
+	overflow hidden
+	color $dark
+	box-shadow $shadow
+	background-color white
+	
+
+	// Elements
+
+	.article__bg
+		cover absolute
+
+	.article__title
+		font-weight 500
+		margin-bottom 5px
+
+	.article__description
+		margin-bottom 10px
+		font-size $global-size-md
+		line-height $global-lh-md
+		&:last-child
+			margin-bottom 0
+
+	.article__content
+		p
+			font-size $global-size-md
+			opacity .7
+		
+	&.article--feature
+		padding 20px
+		display flex
+		align-items center
+		margin-bottom 20px
+		flex-direction column
+		text-align center
+		@media $break-md
+			text-align left
+			flex-direction row
+		.article__icon
+			@media $break-md
+				width 20%
+			img 
+				width 60px
+		.article__body
+			padding-top 20px
+			margin-top 20px
+			border-top 1px solid rgba(0,0,0,.1)
+			@media $break-md
+				margin-top 0
+				padding-top 0
+				padding-left 10px
+				border-top 0
+				border-left 1px solid rgba(0,0,0,.1)
+				width 80%
+
+	&.article--module
+		padding 20px
+		.article__number
+			font-size 48px
+			line-height 52px
+			color $color_primary
+			font-weight bold
+			margin-bottom 10px
+
+		.article__icon
+			position absolute
+			top 20px
+			right 20px
+			opacity .15
+			filter grayscale(1)
+			img
+				height 150px
+		.article__body
+			.article__title
+				margin-bottom 10px
+			.article__subtitle
+				margin-bottom 10px
+				font-weight bold
+				text-decoration underline

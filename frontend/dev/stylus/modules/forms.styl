@@ -1,0 +1,141 @@
+
+form
+.form
+	position relative
+
+input
+select
+textarea
+	display block
+	width 100%
+	padding 10px
+	vertical-align top
+	background white
+	box-sizing border-box
+	-webkit-appearance none
+	appearance none
+	font-weight 100
+	&:focus
+		border-color color
+/*
+input:-webkit-autofill
+	box-shadow 0 0 0px 1000px #fff inset
+*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance none
+	margin 0
+
+
+select
+	display inline-block
+	border none
+	opacity 1
+	padding 10px 40px 10px 15px
+	margin-bottom 0
+	background url('../img/icon-select.png') 100% 50% no-repeat
+
+textarea
+	height 100px
+	overflow auto
+
+
+.form__element
+	padding-top 20px
+	position relative
+	display block
+	&:hover
+		cursor text
+
+	.form__title, .form__title__notfocus
+		font-size $global-size-sm + 1
+		font-weight 500
+		position absolute
+		left 0
+		transition .2s ease
+		transform-origin left top
+		opacity .7
+		top 0
+		transform scale(.85)
+		
+	.form__title__notfocus
+		top 0
+		transform scale(1)
+	
+	.form__elemet__alert
+		font-size 12px
+		line-height 14px
+		display none
+		padding 10px
+		text-align center
+		color red
+		&.show
+			display block
+
+	.form__input
+		position relative
+		border 1px solid rgba(0,0,0,.1)
+		z-index 2
+		opacity 1
+		input
+		select
+		textarea
+			background-color $light
+			color $dark
+			border 0
+			padding-left 20px
+			padding-right 0
+			
+
+	.form__select
+		position relative
+		border-bottom 1px solid $light
+		cursor pointer
+		color $dark
+		tap 0
+		select
+			display none
+
+
+	&:after
+		content ""
+		position absolute
+		bottom 0
+		left 0
+		width 0%
+		height 2px
+		border-radius 2px
+		background black
+		transition .5s
+		z-index 2
+
+	&.form__element--focused
+		.form__input
+			border-color $color_primary
+
+
+	&.form__element--filled
+	&.form__element--focused
+	&.form__element--file
+		.form__title
+			top 0
+			transform scale(.85)
+
+
+	&.form__element--error
+		position relative
+		width 100%
+		&:after
+			content '\f071'
+			font-family "FontAwesome"
+			position absolute
+			top 5px
+			right 20px
+			left initial
+			color red
+			font-size 14px
+			line-height 14px
+			display inline-block
+			background-color transparent
+

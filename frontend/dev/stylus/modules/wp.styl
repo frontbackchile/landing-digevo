@@ -1,0 +1,77 @@
+.wp
+	max-width $limit
+	margin 0 auto
+	overflow hidden
+	color $dark
+	p
+		font-weight 300
+		@media $break-sm
+			font-size $global-size-md
+			line-height $global-lh-md
+		
+	img
+		margin-bottom 20px
+		// WP
+		&.alignright
+			@media $break-lg
+				float right
+				margin-left 40px
+		&.alignleft
+			@media $break-lg
+				float left
+				margin-right 40px
+		&.aligncenter
+			margin 0 auto
+
+
+	h1, h2, h3, h4,	p, ol, ul, table, blockquote, pre, iframe
+		margin-bottom sep
+		&:last-child
+			margin-bottom 20px
+
+	h1, h2, h3, h4, h5
+		padding-top 10px
+		&:first-child
+			padding-top 0
+
+	ol
+		list-style-type decimal
+		margin-left 20px
+
+	ul
+		margin 10px 30px
+		li
+			padding-left 25px
+			margin-bottom 10px
+			position relative
+			&:before
+				content "\f00c"
+				font-family "FontAwesome"
+				position absolute
+				top 0
+				left 0
+				color $color_primary
+
+
+	blockquote
+		padding 10px $sep
+		padding-left 20px
+		border-left 2px solid color
+		font-size 1.2em
+		line-height 1.5em
+		font-style italic
+		position relative
+		border-left 4px solid $color_primary
+		margin-bottom 20px
+
+	pre
+		background rgba(0,0,0,.05)
+		padding 10px sep
+		overflow auto
+
+
+
+	a
+		text-decoration none
+		&:hover:not(.btn)
+			text-decoration underline

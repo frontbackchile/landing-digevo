@@ -1,0 +1,373 @@
+
+header
+	height $header-height
+	line-height $header-height
+	position fixed
+	top 0
+	left 0
+	width 100%
+	z-index $z-index-header
+	color white
+	transition .5s
+	background-color $color_primary
+	a
+		color $dark
+	
+	.header__primary
+		position relative
+		z-index $z-index-header
+		height 100%	
+		transition .5s	
+
+	.header__bg				
+		cover absolute 
+		transition .5s
+		opacity 0
+
+	.header__wrap
+		position relative
+		max-width $limit
+		margin 0 auto
+		height 100%
+	
+	.header__item
+		&.header__item--desktop
+			display none
+			@media $break-md
+				display block
+
+		&.header__item--mobile
+			display block
+			@media $break-md
+				display none
+				
+	.header__inner
+		position relative
+		height 100%
+		text-align left
+		border-bottom 1px solid rgba(255,255,255,.3)
+
+	.header__logo
+		float left
+		margin-left 20px
+		transition 0s
+		img
+			transition 0s
+			display inline-block
+			width 200px
+			position relative
+			top 10px
+			
+
+	.header__nav
+		display none
+		z-index 1
+		.header__nav__back
+		.header__nav__close
+			position absolute
+			top 0
+			width 50px
+			height 50px
+			opacity .5
+			z-index 3
+			display none
+			div
+				height 2px
+				background $color_primary
+				width 15px
+				position absolute
+				top 50%
+				left 50%
+				margin-top -1px
+				border-radius 2px
+				margin-left (@width / -2)
+				
+		.header__nav__close
+			right 0	
+			div
+				transform rotate(45deg)
+				&:last-child
+					transform rotate(135deg)	
+
+		.header__nav__back
+			left 0
+			animation slideFadeLeft .5s ease
+			div
+				&:first-child
+					transform-origin left top
+					transform rotate(45deg)
+					width 10px
+				&:last-child
+					transform-origin left bottom
+					transform rotate(-45deg)
+					width 10px		
+		
+		
+	.header__ham
+		position relative
+		background-color transparent
+		width 35px
+		height 42px
+		padding 16px 0
+		display inline-block
+		vertical-align middle
+		border-radius $rad
+		height @width
+		text-align center
+		height 45px
+		span
+			display block
+			height 2px
+			margin 0 auto 4px
+			background white
+			width 25px
+			transition .2s ease
+
+	.header__right
+		position relative
+		float right
+		.header__item
+			float left
+			padding 0px 7px
+			min-width 40px
+			font-size 24px
+			cursor pointer
+			position relative
+			top -2px
+			//transition .2s ease
+			span
+				margin-left 5px
+		
+
+			.header__item__nav		
+				ul
+					position absolute
+					top 100%
+					height auto
+					left 0
+					background $dark
+					width 200px
+					padding 10px 0
+					display none
+					animation heightMd .5s ease
+					box-shadow $shadow
+					li
+						display block
+						a
+							display block
+							line-height $global-lh
+							padding 10px 20px
+							opacity .6
+							color white
+							font-size $global-size-sm
+							font-weight 500
+							text-transform uppercase
+							&:hover
+								opacity 1
+							img, span
+								float left
+								margin 5px
+								width 20px
+								opacity 1
+								position relative
+								bottom 5px
+							span
+								font-size 24px
+								line-height 28px
+								vertical-align middle
+								color $dark
+								opacity 1	
+								bottom 10px	
+						&:after
+							display none
+
+			&.header__item--button
+				a
+					line-height 24px	
+
+
+		
+		.header__ham
+			span
+				background white
+
+	&.header--color
+	&.header--hover
+	&.header--static /////////// TO FIX
+		.header__bg				
+			opacity 1
+	
+	&.header--color-static
+		.header__bg				
+			opacity 1
+
+
+
+
+	@media $break-lg-i
+
+		.header__nav
+			line-height $global-lh
+			cover(fixed)
+			text-align left
+				
+
+			.header__nav__nav
+				position absolute
+				top 0
+				right 0
+				width 260px
+				height 100%
+				background white
+				color $dark
+				animation slideLeft .5s ease
+				
+				
+				nav
+					margin-top 80px
+					&.header__nav__nav--desktop	
+						display none
+						
+					&.header__nav__nav--mobile
+						display block
+
+					.header__item
+						text-align center
+						padding 10px 
+						.btn
+							width 100%
+							padding 5px
+				
+
+
+			.header__nav__bg
+				animation fadeIn .5s ease
+				cover(absolute)
+				background $dark
+				opacity .5
+				tap 0
+
+			.header__nav__close
+				display block
+
+			&.header__nav--ul-in
+				.header__nav__back
+					display block
+
+
+		&.header--nav-in
+			.header__nav
+				display block
+
+		&.header--nav-out
+			.header__nav
+				display block
+				.header__nav__bg
+					animation fadeOut .5s ease both
+				.header__nav__nav
+					animation slideRightOut .5s ease both
+
+
+
+@media $break-md
+	header
+		height $header-height-md
+		line-height $header-height-md + 2
+		.header__wrap
+			padding 0 40px
+
+		.header__logo
+			margin-left 0px
+			margin-right 40px
+			width 250px
+			position relative
+			top 0px
+			img
+				width 250px
+				transition .5s	
+
+		.header__ham
+			margin-right -20px
+		
+		.header__inner
+			text-align center
+			
+		.header__nav
+
+			.header__nav-close
+				display none
+			.header__nav__back
+				display none	
+			nav
+				&.header__nav__nav--desktop	
+					display block
+				&.header__nav__nav--mobile	
+					display none	
+				
+				.header__nav__title
+					padding 15px
+			ul
+				padding-top 0
+				
+				&.header__nav__none
+					display none
+				
+				li
+					&.header__nav__sep
+						border-left 1px solid rgba(255,255,255,.1)
+						margin-left 15px
+						padding-left 15px	
+					a
+						font-size 10px		
+				
+			
+
+@media $break-lg
+
+	header
+		background-color transparent
+		color $dark
+
+		.header__ham
+			display none
+
+		.header__nav
+			display inline-block
+			text-align left
+			ul
+				li
+					display inline-block
+					position relative
+					a
+						position relative
+						padding 25px 20px
+						line-height $header-height-md
+						font-size $global-size-md - 2
+						color white
+						text-transform capitalize
+						font-weight 500
+						max-width 50px
+						opacity .7
+						transition .5s
+						.fa
+							margin-left 5px
+
+						&.current
+							opacity 1
+
+					&:hover
+						a	
+							opacity 1
+
+
+
+		&.header--min
+
+			.header__bg				
+				opacity 1
+
+	
+
+					
+
+		

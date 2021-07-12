@@ -1,0 +1,64 @@
+.faq
+	radius rad
+	overflow hidden
+	text-align left
+	.faq__item
+		background $light
+		position relative
+		border-radius $rad
+		overflow hidden
+		color $dark
+		margin-bottom 10px
+		border 1px solid rgba(255,255,255,.05)
+
+		&.faq__open
+			.faq__question
+				.fa
+					transform rotate(180deg)
+
+		.faq__icon
+			display inline-block
+			img 
+				width 30px 
+
+	.faq__question
+		margin-bottom 0
+		padding 15px 20px
+		transition .5s
+		title(h5)
+		font-weight 500
+		display flex
+		width 100%
+		justify-content space-between
+		align-items center
+		@media $break-md
+			padding 20px 30px
+			title(h5)
+		.fa
+			transition .5s
+			color $color_primary
+			margin-left 10px
+			float right
+		&:hover
+			cursor pointer
+			color $color_primary
+		
+
+
+	.faq__answer
+		padding 0 20px 20px
+		border-top 1px solid rgba(0,0,0,.1)
+		color white
+		@media $break-md
+			padding 25px 30px 25px
+		
+		li
+			font-weight 500
+			margin-bottom $global-sep
+			opacity .8
+			@media $break-md
+				line-height $global-lh-md
+				font-size $global-size-md	
+		
+
+

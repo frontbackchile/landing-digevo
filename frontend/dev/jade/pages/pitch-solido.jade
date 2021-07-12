@@ -1,0 +1,121 @@
+extends ../templates/default-2.jade
+block page
+
+
+	section.section--header
+		
+		.section__wrap
+			.section__body
+				.cols
+					.section__flex
+						.col-md-6
+							.section__content
+								h1.section__title Pitch sólido
+								p.section__description: +lorem(35)
+
+						.col-md-6
+							.section__svg
+								img(src="img/uploads/8.svg")
+
+
+	section.section--content
+		.section__bg
+			.bg
+				img(src="img/uploads/geometric.png")
+		.section__wrap.section--sm
+			.section__body
+				.section__content.section--center.dscroll
+					h3.section__title ¿Que es The Startup Journey?
+					.section__img
+						img(src="img/icons/logo-main.png")
+					p.section__description: +lorem(55)
+					p.section__description: +lorem(45)
+	
+
+	section.section--avatar
+		.section__wrap
+			.section__body
+				.cols
+					.section__flex
+						.col-md-6
+							.section__avatar
+								img(src="img/uploads/avatar.jpg")
+						.col-md-6
+							.section__content
+								h3.section__title Un modelo construído con experiencia
+								p.section__description The Startup Journey: Roberto Musso es emprendedor, director de empresas y consultor en estrategia digital. Junto a sus socios, ha fundado más de 25 startups tecnológicos como: STI, software factory adquirida el año 2000 por Unión Fenosa, AxonAxis, web services hub comprado el 2010 por EquiFax. Además, es presidente de Digevo, un grupo chileno de em-presas tecnológicas con operación en 15 países.
+								p.section__name Roberto Musso
+								p.section__position Presidente de Digevo
+								.section__socials
+									.section__social
+										a(href="#")
+											span.fa.fa-twitter
+									.section__social
+										a(href="#")
+											span.fa.fa-linkedin
+
+	section.section--modules
+		.section__wrap
+			.section__body
+				.cols
+					.col-md-4
+						article.article--module
+							.article__number 1
+							.article__icon
+								img(src="img/icons/8.svg")
+							.article__body
+								h4.article__title Área de administración
+								p.article__subtitle Curso / Taller:
+								p.article__description Plan de negocio 1
+								p.article__description Plan de expansión.
+								p.article__description Orquestación y proveedores.
+					.col-md-4
+						article.article--module
+							.article__number 2
+							.article__icon
+								img(src="img/icons/9.svg")
+							.article__body
+								h4.article__title Área de finanzas
+								p.article__subtitle Curso / Taller:
+								p.article__description Venture Deals.
+								p.article__description Fuente de financiamiento.
+								p.article__description Propiedad intelectual.
+					.col-md-4
+						article.article--module
+							.article__number 3
+							.article__icon
+								img(src="img/icons/10.svg")
+							.article__body
+								h4.article__title Área de personal
+								p.article__subtitle Curso / Taller:
+								p.article__description Mentoría /coachching.
+					.col-md-4
+						article.article--module
+							.article__number 4
+							.article__icon
+								img(src="img/icons/11.svg")
+							.article__body
+								h4.article__title Área de marketing
+								p.article__subtitle Curso / Taller:
+								p.article__description Marketing para startup II.
+								p.article__description Ventas II.
+								p.article__description Demo day inversionistas.
+
+					.col-md-4
+						article.article--module
+							.article__number 5
+							.article__icon
+								img(src="img/icons/12.svg")
+							.article__body
+								h4.article__title Área de actividades
+								p.article__subtitle Curso / Taller:
+								p.article__description Mentoría II.
+	
+	section.section--button
+		.section__wrap
+			.section__body
+				.section__button
+					a.btn.btn--lg(href="#") Comenzar curso
+						span.fa.fa-long-arrow-right
+
+							

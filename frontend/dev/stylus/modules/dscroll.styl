@@ -1,0 +1,41 @@
+
+// Display in scroll
+
+.dscroll
+	opacity 0
+	animation none
+	transition none
+
+	&.dscroll--in
+		animation slideFadeUp .8s ease-out backwards
+		opacity 1
+
+	&.dscroll--svg
+		&.dscroll--in
+			animation slideFadeRightSVG 2s ease-out backwards
+			opacity 1
+
+	&.dscroll--svg-right
+		&.dscroll--in
+			animation slideFadeLeftSVG 2s ease-out backwards
+			opacity 1
+
+	&.dscroll--svgback
+		&.dscroll--in
+			animation slideFadeUpBack 3s ease-out backwards
+			opacity 1
+
+	&.dscroll--text
+		.section__body
+			&>*
+				opacity 0
+				animation none
+				transition none
+
+		&.dscroll--in
+			animation none
+			.section__body
+				&>*
+					animation slideFadeUp 2s ease backwards
+					animation-stagger(5,.2s)
+					opacity 1

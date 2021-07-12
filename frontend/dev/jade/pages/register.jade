@@ -1,0 +1,44 @@
+extends ../templates/default.jade
+block page
+
+
+	section.section--main
+		.section__bg
+			.bg
+				img(src="img/uploads/2.jpg")
+		
+		.section__wrap.section__wrap--header
+			.section__body
+				.section__content
+					h1.section__title Registrarse
+					p.section__description: +lorem(35)
+	
+	section.section--form
+		.section__wrap
+			.section__body
+				.section__form
+					h3.section__title Registrarse
+					form.form
+						.form__element
+							.form__title Nombre
+							.form__input
+								input(type="text" name="#")
+						.form__element
+							.form__title E-mail
+							.form__input
+								input(type="email" name="#")
+						.form__element
+							.form__title Ciudad
+							.form__input
+								input(type="text" name="#")
+						.form__element
+							.form__title Teléfono
+							.form__input
+								input(type="text" name="#")
+						.form__element
+							.form__title Contraseña
+							.form__input
+								input(type="text" name="#")
+
+						.form__button
+							button.btn Crea tu cuenta

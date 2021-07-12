@@ -1,0 +1,33 @@
+extends ../templates/default.jade
+block page
+
+
+	section.section--main
+		.section__bg
+			.bg
+				img(src="img/uploads/2.jpg")
+		
+		.section__wrap.section__wrap--header
+			.section__body
+				.section__content
+					h1.section__title Iniciar sesión
+					p.section__description: +lorem(35)
+	
+	section.section--form
+		.section__wrap
+			.section__body
+				.section__form
+					h3.section__title Iniciar sesión
+					form.form
+						.form__element
+							.form__title Usuario o email
+							.form__input
+								input(type="text" name="#")
+
+						.form__element
+							.form__title Contraseña
+							.form__input
+								input(type="email" name="#")
+
+						.form__button
+							button.btn Ingresar
