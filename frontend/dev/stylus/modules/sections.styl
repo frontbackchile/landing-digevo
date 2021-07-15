@@ -35,6 +35,7 @@ section
 
 	.section__title
 		font-weight bold
+		
 
 	.section__description
 		font-weight 300
@@ -300,6 +301,11 @@ section
 				padding-left 10px
 				@media $break-md
 					max-width 50%
+				
+				.section__title
+					h1, h2, h3, h4, h5
+						color white !important
+
 		.section__bg
 			opacity .3
 
@@ -312,6 +318,9 @@ section
 				margin-bottom 20px
 				@media $break-md
 					margin-bottom 0
+				.section__title
+					h1, h2, h3, h4, h5
+						color $dark !important
 
 			.section__bg
 				position relative
@@ -370,6 +379,10 @@ section
 				padding 20px
 			.section__description
 				font-weight 500
+			.section__title
+				h1, h2, h3, h4, h5
+					color white !important
+
 
 		.section__img
 			padding 20px 0px
@@ -420,6 +433,10 @@ section
 				text-align left
 				border-radius 15px
 
+			.section__title
+				h1, h2, h3, h4, h5
+					color $dark !important
+
 		
 		&.section--media--invert
 			.section__bg
@@ -453,6 +470,9 @@ section
 				.section__description
 					opacity 1
 					font-weight 500
+				.section__title
+					h1, h2, h3, h4, h5
+						color white !important
 			.section__buttons
 				.btn
 					margin 5px
@@ -463,6 +483,9 @@ section
 		.section__content
 			padding-left 10px
 			border-left 1px solid $color_secondary
+			.section__title
+				h1, h2, h3, h4, h5
+					color $dark !important
 
 		.section__bg
 			position relative
