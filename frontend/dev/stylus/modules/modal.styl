@@ -1,0 +1,62 @@
+
+.modal
+	cover(fixed)
+	z-index $z-index-modal
+	display none
+
+	&.modal--in
+		display table
+		animation fadeIn .5s ease
+		.modal__box
+			animation scaleFadeIn .5s .2s ease backwards
+
+	&.modal--out
+		display table
+		animation fadeOut .2s ease both
+		.modal__box
+			animation scaleFadeOut .2s ease both
+
+	.modal__back
+		cover(absolute)
+		background: rgba(5,102,116,.5);
+		background: linear-gradient(101deg, rgba(5,102,116,.5) 12%, rgba(102,191,191,.5) 100%)
+
+	.modal__front
+		position relative
+		height 100%
+		display table-cell
+		text-align center
+		vertical-align middle
+
+	.modal__box
+		padding 30px
+		border-radius $rad * 5
+		background white
+		max-width $limit
+		margin 0 auto
+		position relative
+
+	.modal__option
+		display flex
+		justify-content space-around
+		padding-top 10px
+
+	.modal__content
+
+		.modal__title
+			margin-bottom 10px
+
+		.modal__message
+			&:last-child
+				margin-bottom 0
+
+	.modal__close
+		position absolute
+		top 0
+		right 0
+		padding 10px 15px
+		opacity .5
+		color $gray
+		&:hover
+			cursor pointer
+
