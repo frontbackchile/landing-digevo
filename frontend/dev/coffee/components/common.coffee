@@ -1,6 +1,4 @@
 
-valueDolar = 0
-valueUF = 0
 app.common =
 
 	init: ->
@@ -42,15 +40,3 @@ app.common =
 		$(window).on 'resize', ->
 			applyArticlesMinHeight()
 
-			
-		$("#switchdark").click ->
-			if $(this).is ':checked'
-				$("#sections").addClass("section--dark")
-			else
-				$("#sections").removeClass("section--dark")
-
-		$("#switchzoom").click ->
-			if $(this).is ':checked'
-				$("body").addClass("zoom")
-			else
-				$("body").removeClass("zoom")
